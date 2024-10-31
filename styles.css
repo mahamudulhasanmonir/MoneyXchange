@@ -1,0 +1,154 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+    margin: 0;
+}
+
+/* Container settings for central layout */
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+.converter {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #764ba2;
+}
+
+.input-section, .dropdown-section, .result-section {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/* Standardize input sizes */
+input[type="number"], .autocomplete input {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Styling for Convert button */
+button {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    background-color: #764ba2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #667eea;
+}
+
+/* Dropdown section with column alignment for responsive layout */
+.dropdown-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Autocomplete dropdown settings */
+.autocomplete {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling individual dropdown items */
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.autocomplete-items div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Flag icon styling */
+.autocomplete img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.result-section h2 {
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+#result {
+    font-size: 1.5em;
+    color: #764ba2;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .converter {
+        padding: 1.5rem;
+    }
+
+    .dropdown-section {
+        gap: 0.5em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}
